@@ -1,3 +1,4 @@
+Corey Shafer's python tutorial on csv files and flask make this project possible
 GOALS FOR THIS SERVER
     - Be able to view individual teams
         - photo
