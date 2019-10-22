@@ -2,6 +2,8 @@ import csv
 import time
 import sys
 import operator
+import flask
+from colorama import Fore, Back, Style
 
 while True:
     action = float(input( "Get Specifics of one team[1], all teams[2], or calculate the best alliance[3]" ))
@@ -15,7 +17,9 @@ while True:
                 for i, row in enumerate(reader):
                     for j, column in enumerate(row):
                         if string in column:
+                            # print(Fore.LIGHTBLUE_EX)
                             print(row)
+                            # print(Style.RESET_ALL)
     if action == 2:
         with open('responses.csv', 'r') as csv_file:
             csv_reader = csv.reader(csv_file)
