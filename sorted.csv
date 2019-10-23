@@ -1,4 +1,5 @@
-Timestamp,Team number,How does your robot function,Where do you start,Average Auton Points,How many cubes can you stack,What towers can you place in,V5 or Cortex,Are you defense or offense,Are you confident in Stacking or puttingin towers,Average skill scopres (driving),Averageskill score (auto),Anything to know
-10/11/2019 14:41:39,9447B,One and done,Bottomlike,2,9999,all,V5,Offense,Mix,21+,13+,Pick them if not we are throwing
-10/11/2019 14:43:16,9447K,Multi yoink,Bottomlike,8,2,all,V5,Defense,Mix,1-5,1-3,Hope it works
-10/11/2019 14:46:06,9447A,Multi yoink,Bottomlike,5,3,all,V5,Offense,Towers,1-5,1-3,Look at other robots
+Timestamp,Team Number,Robot Function,Starting Position,Autonomous Points,Stacked Cubes,Stack Towers?,V5 or Cortex?,Defence or Offense,Stacking or Towers,Average skill scores (driving),Averageskill score (auto),Anything else to know????
+2019/10/22 7:42:50 PM AST,9447A,Tray bot,Top,5,3-4,Yes,V5,Offense,Stacking,6-10,1-3,
+2019/10/22 7:43:35 PM AST,25545A,Dr4b clamp,Middle,0,3-4,Yes,V5,Offense,Towers,1-5,1-3,
+2019/10/22 7:44:02 PM AST,9447B,Tray bot,Bottom,1,1-2,Yes,V5,Offense,Stacking,6-10,1-3,
+2019/10/22 7:45:23 PM AST,9623P,Tray bot,Top,3,3-4,Yes,V5,Offense,Mix,6-10,1-3,

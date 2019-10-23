@@ -21,20 +21,32 @@ while True:
                             print(row)
                             # print(Style.RESET_ALL)
     if action == 2:
-        with open('responses.csv', 'r') as csv_file:
-            csv_reader = csv.reader(csv_file)
-            linewanted = input(" What do you want to see, Robot function[2], Starting position[3], Auton Points[4], # of cubes able to stack[5], Towers able to stack in[6], V5 or Cortex[7], Defensive or Offensive[8], Skills Scores[9],  ")
-            linenumber = int(linewanted)
-            for line in csv_reader:
-                print([line[1],line[linenumber]])
+        # with open('responses.csv', 'r') as csv_file:
+        #     csv_reader = csv.reader(csv_file)
+        #     linewanted = input(" What do you want to see, Robot function[2], Starting position[3], Auton Points[4], # of cubes able to stack[5], Towers able to stack in[6], V5 or Cortex[7], Defensive or Offensive[8], Skills Scores[9],  ")
+        #     linenumber = int(linewanted)
+        #     for line in csv_reader:
+        #         print([line[1],line[linenumber]])
+        with open('responses.csv', 'r') as sorted_file:
+                csv_reader = csv.reader(sorted_file)
+                linewanted = input(" What do you want to see, Robot function[2], Starting position[3], Auton Points[4], # of cubes able to stack[5], Towers able to stack in[6], V5 or Cortex[7], Defensive or Offensive[8], Skills Scores[9],  ")
+                linenumber = int(linewanted)
+                # sortagain = sorted(csv_reader, key=operator.itemgetter(linenumber))
+                next(csv_reader)
+                sortagain = sorted(csv_reader, key=lambda x:int(x[linenumber]))
+                # for eachline in sort:
+                #     print(eachline)
+                print('Best team at the bottom of list')
+                for col in sortagain:
+                    print(col[1], col[linenumber])
 
     if action == 3:
         with open('responses.csv', 'r') as csv_file:
             csv_reader = csv.reader(csv_file)
-            sort = sorted(csv_reader, key=operator.itemgetter(6))
+            sort = sorted(csv_reader, key=operator.itemgetter(7))
             my_file_name = "responses.csv"
             cleaned_file = "sorted.csv"
-            remove_words = ['short']
+            remove_words = ['No']
 
             with open(my_file_name, 'r', newline='') as infile, \
                 open(cleaned_file, 'w',newline='') as outfile:
@@ -47,12 +59,13 @@ while True:
             with open('sorted.csv', 'r') as sorted_file:
                 csv_reader = csv.reader(sorted_file)
 
-                sortagain = sorted(csv_reader, key=operator.itemgetter(4))
+                # sortagain = sorted(csv_reader, key=operator.itemgetter(4))
+                next(csv_reader)
+                sortagain = sorted(csv_reader, key=lambda x:int(x[4]))
                 # for eachline in sort:
                 #     print(eachline)
                 print('Best team at the bottom of list')
                 for col in sortagain:
-                    
                     print(col[1])
 
         
